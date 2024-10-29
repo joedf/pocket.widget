@@ -1,6 +1,9 @@
 # auth info
 CONSUMER_KEY
 
+# generic ignore flag
+~*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
