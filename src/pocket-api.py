@@ -5,11 +5,23 @@ import requests
 import json
 
 REDIRECT_URI = 'pocketapp1234:authorizationFinished'
-CONSUMER_KEY = open('CONSUMER_KEY', 'r').readline()
+CONSUMER_KEY = ''
 
 # https://getpocket.com/developer/docs/overview
 API_URI = "https://getpocket.com/v3/"
 
+
+# ----------------------------------------------------
+# Get consumer key
+if len(sys.argv) > 1:
+	# check if provided as arg / param
+	CONSUMER_KEY = sys.argv[1]
+else:
+	# otherwise, attempt default file read
+	CONSUMER_KEY = open('CONSUMER_KEY', 'r').readline()
+
+# ----------------------------------------------------
+# Quick validate consumer key
 if '-' not in CONSUMER_KEY or len(CONSUMER_KEY) != 30:
 	print(f'ERROR: Invalid CONSUMER_KEY provided: {CONSUMER_KEY}')
 	sys.exit()
