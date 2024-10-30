@@ -44,6 +44,8 @@ def main():
     if len(sys.argv) > 1:
         # check if provided as arg / param
         CONSUMER_KEY = sys.argv[1]
+        if isValidKey(CONSUMER_KEY):
+            trySaveKey('CONSUMER_KEY', CONSUMER_KEY)
 
     # ----------------------------------------------------
     # Quick validate consumer key
@@ -57,6 +59,8 @@ def main():
     if len(sys.argv) > 2:
         # check if provided as arg / param
         ACCESS_CODE = sys.argv[2]
+        if isValidKey(ACCESS_CODE):
+            trySaveKey('ACCESS_CODE', ACCESS_CODE)
 
     if not isValidKey(ACCESS_CODE):
         r = requests.get(API_URI + 'oauth/request', params={
@@ -80,6 +84,8 @@ def main():
     if len(sys.argv) > 3:
         # check if provided as arg / param
         ACCESS_TOKEN = sys.argv[3]
+        if isValidKey(ACCESS_TOKEN):
+            trySaveKey('ACCESS_TOKEN', ACCESS_TOKEN)
 
     if not isValidKey(ACCESS_TOKEN):
         url = f'https://getpocket.com/auth/authorize?request_token={access_code}^&redirect_uri={REDIRECT_URI}'
