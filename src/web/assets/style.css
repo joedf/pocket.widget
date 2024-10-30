@@ -14,7 +14,7 @@ body.compact { font-size: 12px; }
 .widget-container {
 	width: 100%;
 	max-width: 400px;
-	margin: 20px auto;
+	/* margin: 20px auto; */
 	border: 1px solid #ddd;
 	border-radius: 8px;
 	padding: 5px 10px;
@@ -81,7 +81,7 @@ body.compact { font-size: 12px; }
 	padding-bottom: 0;
 }
 .dark .article { border-color: #777; }
-.compact .article { min-height: 7em; }
+.compact .article { min-height: 6em; }
 
 .image {
 	float: left;
