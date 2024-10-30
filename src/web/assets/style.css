@@ -59,6 +59,7 @@ img {
 }
 .dark .bottom a { color: #0cc }
 
+.logo { height: 24px; }
 .logo-light { display: block; }
 .logo-dark { display: none; }
 .dark .logo-light { display: none }
