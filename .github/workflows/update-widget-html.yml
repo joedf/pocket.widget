@@ -42,6 +42,7 @@ jobs:
         with:
           commit_message: Automated commit - update output.html
           file_pattern: 'src/web/output.html'
+          commit_author: github-actions[bot] <actions@github.com>
           branch: gh-pages
           create_branch: true
           skip_dirty_check: true
