@@ -1,6 +1,6 @@
 # pocket.widget
  
-Simple widget to share your latest saved articles on [Pocket](https://getpocket.com).
+Simple widget to showcase your latest saved articles on [Pocket](https://getpocket.com).
 
 ## Screenshot
 
