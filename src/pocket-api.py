@@ -10,7 +10,7 @@ from jinja2 import FileSystemLoader
 
 from pathlib import Path
 scriptDir = Path(__file__).parent
-sys.path.append(scriptDir)
+os.chdir(scriptDir)
 
 
 APP_NAME = 'pocket.widget'
