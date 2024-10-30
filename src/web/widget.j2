@@ -16,6 +16,13 @@ Released under the MIT License
 </head>
 
 <body>
+  <script>
+      // Set the dark theme if set in the URL...
+      const urlParams = new URLSearchParams(window.location.search)
+      if (urlParams.get('theme') == 'dark') {
+          document.body.classList.add('dark');
+      }
+  </script>
 
   <div class="widget-container">
     <div class="top">
