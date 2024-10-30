@@ -2,7 +2,7 @@
  
 Simple widget to showcase your latest saved articles on [Pocket](https://getpocket.com).
 
-## Screenshot
+## Screenshots
 
 ![preview.png](preview.png)
 ![preview.dark.png](preview.dark.png)
