@@ -13,8 +13,8 @@ The script will attempt to save any keys, codes, and tokens as the following fil
 These will be used for subsequent runs.
 
 ### Options
-- Compact mode: You can toggle compact mode by setting the `compact` class on the body tag.
-- Dark mode: You can toggle dark mode by specifying `?theme=dark` after the generate html page address.
+- Compact size: You can toggle compact size by setting the `compact` class on the body tag.
+- Dark mode: You can toggle dark mode by specifying `?theme=dark` after the generated html page address.
 
 ## Screenshots
 
