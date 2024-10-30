@@ -3,12 +3,13 @@
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
-	font-size: 13px;
 }
 
 body {
 	background: transparent;
+	font-size: 13px;
 }
+body.compact { font-size: 12px; }
 
 .widget-container {
 	width: 100%;
@@ -24,7 +25,7 @@ body {
 	background-color: #333;
 }
 .compact .widget-container {
-	max-width: 320px;
+	max-width: 280px;
 }
 
 .top {
@@ -44,7 +45,7 @@ body {
 .dark .top-title { color: #ddd }
 .compact .top-title {
 	font-size: 1em;
-	line-height: 1.6em;
+	line-height: 1.5em;
 }
 
 .bottom {
@@ -62,6 +63,8 @@ body {
 .dark .bottom a { color: #0cc }
 
 .logo { height: 24px; }
+.compact .logo { height: 19px }
+
 .logo-light { display: block; }
 .logo-dark { display: none; }
 .dark .logo-light { display: none }
@@ -89,8 +92,8 @@ body {
 	border: 1px solid #ddd;
 }
 .compact .image {
-	width: 6em;
-	height: 6em;
+	width: 5.5em;
+	height: 5.5em;
 }
 
 .title {
@@ -104,6 +107,7 @@ body {
 	overflow: hidden;
 }
 .dark .title { color: #ddd; }
+.compact .title { font-size: 1em; }
 
 .description {
 	font-size: 0.9em;
@@ -121,6 +125,7 @@ body {
 .compact .description {
 	max-height: 2.6em;
 	-webkit-line-clamp: 2;
+	font-size: 0.88em;
 }
 
 .read-more {
@@ -128,6 +133,11 @@ body {
 	display: inline-block;
 	margin-top: 5px;
 }
+.compact .read-more {
+	font-size: 0.9em;
+	margin-top: 0px;
+}
+
 .read-more a {
 	color: #007bff;
 	text-decoration: none;
