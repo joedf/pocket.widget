@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pocket Widget</title>
+</head>
+
+<body>
+
+  <div class="widget-container">
+    <div class="top">
+      <a href="https://getpocket.com/">
+        <div class="top-title">{{ username }}'s Latest Saves</div>
+        <img class="logo-dark" alt="Pocket" src="data:image/png;base64,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">
+        <img class="logo-light" alt="Pocket" src="data:image/png;base64,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">
+      </a>
+    </div>
+
+    {% for article in articles %}
+    <div class="article">
+      <img class="image" src="{{ article.image }}">
+      <div class="title">{{ article.title }}</div>
+      <div class="description">{{ article.excerpt }}</div>
+      <a href="{{ article.link }}" class="read-more">Read More</a>
+    </div>
+    {% endfor %}
+
+    <div class="bottom">Generated by <a href="{{ app_url }}">{{ app_name }}</a></div>
+  </div>
+
+</body>
+
+</html>
