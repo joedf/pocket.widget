@@ -4,4 +4,5 @@ Simple widget to showcase your latest saved articles on [Pocket](https://getpock
 
 ## Screenshot
 
-![example.png](example.png)
+![preview.png](preview.png)
+![preview.dark.png](preview.dark.png)
