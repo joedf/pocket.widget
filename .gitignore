@@ -161,6 +161,8 @@ cython_debug/
 
 # auth info
 CONSUMER_KEY
+ACCESS_CODE
+ACCESS_TOKEN
 
 # generic ignore flag
 ~*
