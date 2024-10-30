@@ -17,7 +17,7 @@ img {
 	margin: 20px auto;
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	padding: 10px;
+	padding: 5px 10px;
 	background-color: #f9f9f9;
 }
 
@@ -82,22 +82,46 @@ img {
 	color: #333;
 	margin-bottom: 5px;
 	font-weight: bold;
+	max-width: 270px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .description {
 	font-size: 0.9em;
 	color: #555;
 	margin-bottom: 5px;
+	overflow: hidden;
+	max-height: 3.6em;
+
+	/* https://css-tricks.com/line-clampin/ */
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
 .read-more {
 	font-size: 0.9em;
-	color: #007bff;
-	text-decoration: none;
 	display: inline-block;
 	margin-top: 5px;
 }
 
-.read-more:hover {
+.read-more a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.read-more a:hover {
 	text-decoration: underline;
 }
+
+.read-time {
+	margin-left: 0.25em;
+	font-size: 0.9em;
+	color: #888;
+	/* font-style: italic; */
+}
+
+.read-time::before { content: '(' }
+.read-time::after { content: ')' }
