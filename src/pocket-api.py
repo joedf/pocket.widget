@@ -17,7 +17,8 @@ APP_USERNAME = 'joedf'
 TEMPLATE_FILE = 'web/widget.j2'
 TEMPLATE_OUT = 'web/output.html'
 
-REDIRECT_URI = 'pocketapp1234:authorizationFinished'
+# REDIRECT_URI = 'pocketapp1234:authorizationFinished'
+REDIRECT_URI = APP_URL
 CONSUMER_KEY = ''
 ACCESS_CODE = ''
 ACCESS_TOKEN = ''
