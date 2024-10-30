@@ -26,6 +26,8 @@ ACCESS_TOKEN = ''
 # https://getpocket.com/developer/docs/overview
 API_URI = "https://getpocket.com/v3/"
 
+ALLOW_SAVE_KEYS = False
+
 
 def main():
     CONSUMER_KEY = tryGetKey('CONSUMER_KEY')
@@ -47,6 +49,10 @@ def main():
     # ----------------------------------------------------
     # Request for authorization, if needed
     # https://getpocket.com/developer/docs/authentication
+    if len(sys.argv) > 2:
+        # check if provided as arg / param
+        ACCESS_CODE = sys.argv[2]
+
     if not isValidKey(ACCESS_CODE):
         r = requests.get(API_URI + 'oauth/request', params={
             'consumer_key': CONSUMER_KEY,
@@ -66,6 +72,10 @@ def main():
 
     # ----------------------------------------------------
     # Ask and Wait for user to authorize
+    if len(sys.argv) > 3:
+        # check if provided as arg / param
+        ACCESS_TOKEN = sys.argv[3]
+
     if not isValidKey(ACCESS_TOKEN):
         url = f'https://getpocket.com/auth/authorize?request_token={access_code}^&redirect_uri={REDIRECT_URI}'
         AskUserToAuthorize(url)
@@ -152,11 +162,12 @@ def isValidKey(key):
 
 
 def trySaveKey(keyFile, key):
-    try:
-        with open(keyFile, 'w') as f:
-            f.write(key)
-    except:
-        pass
+    if ALLOW_SAVE_KEYS:
+        try:
+            with open(keyFile, 'w') as f:
+                f.write(key)
+        except:
+            pass
 
 
 def tryGetKey(keyFile):

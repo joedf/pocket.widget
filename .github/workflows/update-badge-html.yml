@@ -1,0 +1,48 @@
+name: update-pocket-widget-html
+# Based on:
+# https://github.com/joedf/github-badge-2/blob/master/.github/workflows/update-badge-html.yml
+
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content
+
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # install the python version needed
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: execute py script # run main.py
+        run: python src/pocket-api.py ${{ secrets.CONSUMER_KEY }} ${{ secrets.ACCESS_CODE }} ${{ secrets.ACCESS_TOKEN }}
+
+      - name: remove .gitignore
+        # make sure we don't have .gitignore interfere with committing output.html in next step
+        run: rm .gitignore
+
+      - name: commit output.html
+        # default url/location is https://[USERNAME].github.io/pocket.widget/src/web/output.html
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated commit - update output.html
+          file_pattern: 'src/web/output.html'
+          branch: gh-pages
+          create_branch: true
+          skip_dirty_check: true
+          push_options: '--force'
