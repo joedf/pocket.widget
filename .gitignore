@@ -169,3 +169,6 @@ ACCESS_TOKEN
 
 # ignore output files
 src/web/output.html
+
+# misc
+.vscode
