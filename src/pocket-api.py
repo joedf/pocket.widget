@@ -8,6 +8,11 @@ from jinja2 import __version__ as jinja2_version
 from jinja2 import Environment
 from jinja2 import FileSystemLoader
 
+from pathlib import Path
+scriptDir = Path(__file__).parent
+sys.path.append(scriptDir)
+
+
 APP_NAME = 'pocket.widget'
 APP_TITLE = 'Pocket Widget'
 APP_URL = 'https://github.com/joedf/pocket.widget'
