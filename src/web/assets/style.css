@@ -90,6 +90,7 @@ body.compact { font-size: 12px; }
 	height: 7em;
 	margin-right: 10px;
 	border: 1px solid #ddd;
+	background-color: #fff;
 }
 .compact .image {
 	width: 5.5em;
