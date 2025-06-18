@@ -2,6 +2,8 @@
  
 Simple widget to showcase your latest saved articles on [Pocket](https://getpocket.com).
 
+**Note:** Pocket is shutting down or has been shutdown. For more information, see here: https://support.mozilla.org/en-US/kb/future-of-pocket
+
 ## Usage
 Simply run `pocket-api.py 1234-abcd1234abcd1234abcd1234` with your [consumer key](https://getpocket.com/developer/docs/authentication) to generate the `widget.html` in the `src\web` folder.
 
